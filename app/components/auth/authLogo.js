@@ -1,22 +1,20 @@
 import React from 'react';
-import { View, Image } from 'react-native';
+import {View, Image} from 'react-native';
 
-import LogoImage from '../../assets/images/nba_login_logo copy.png'
-import { getActiveChildNavigationOptions } from 'react-navigation';
+import LogoImage from '../../assets/images/yodj.png'
 
 const LogoComponent = () => {
     return (
-        <View style={{ alignItems: 'center' }}>
-            <Image
-                source={LogoImage}
-                resizeMode={'contain'}
-                style={{
-                    width: 170,
-                    height: 150
-                }}
-
-            />
-        </View>
+    <View style={{alignItems: 'center'}}>
+        <Image 
+            source={LogoImage}
+            resizeMode={'contain'}
+            style={{
+                width:200,
+                height:250
+            }}
+        />
+    </View>
     )
 }
 
