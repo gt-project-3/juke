@@ -8,16 +8,15 @@ import {
     createAppContainer
 } from 'react-navigation'
 
+
 //Screens
 import SignIn from './components/auth';
 import Main from './components/main';
-import Maps from './components/map';
-// import Dj from './components/dj';
+import Maps from './components/map/pickLocation';
 
 const AppStack = createBottomTabNavigator({
     Main: Main,
     Maps: Maps,
-    // Dj: Dj
 })
 
 const AuthStack = createStackNavigator({
