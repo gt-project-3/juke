@@ -6,7 +6,7 @@ import LogoImage from '../../assets/images/yodj.png'
 const LogoComponent = () => {
     return (
     <View style={{alignItems: 'center'}}>
-        <Image 
+        <Image
             source={LogoImage}
             resizeMode={'contain'}
             style={{
