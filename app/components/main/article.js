@@ -1,14 +1,18 @@
 import React, { Component } from 'react';
 
-import { StyleSheet, View, Text } from 'react-native';
+import { StyleSheet, View, Text, Image, } from 'react-native';
+
+import { Button, ThemeProvider } from 'react-native-elements';
 
 class ArticleComponent extends Component {
     render() {
 
         return (
-            <View>
-                <Text>Hello I'm the Article Page</Text>
-            </View>
+            
+                 <ThemeProvider>
+                    <Button title="Hey!" />
+                </ThemeProvider>
+            
         );
     }
 }
