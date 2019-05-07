@@ -12,7 +12,7 @@ const LogoTitle = () => (
     style = {
         {
             width: 190,
-            height: 120
+            height: 80
         }
     }
     />
