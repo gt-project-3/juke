@@ -10,11 +10,11 @@ import {
 } from 'react-navigation';
 
 import SignIn from './components/auth';
-import Main from './components/Chat Screen/chat';
-import Maps from './components/map/pickLocation';
+import Main from './components/main';
 import Logo from './utils/logo';
-import Article from './components/Chat Screen/chat';
 import DjArticle from './components/dj/article';
+import Article from './components/main/article';
+import Maps from './components/map/pickLocation';
 
 const headerConf = {
     headerLayoutPreset: 'center',
@@ -35,7 +35,9 @@ const NewsStack = createStackNavigator({
 const DjStack = createStackNavigator({
     Maps: Maps,
     Article: DjArticle
-}, headerConf);
+},
+    headerConf
+);
 
 
 const AppStack = createBottomTabNavigator({
