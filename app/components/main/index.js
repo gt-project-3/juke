@@ -144,6 +144,7 @@ class Main extends Component {
                                         <Icon
                                             active
                                             name="chatbubbles"
+
                                             style={{
                                                 fontSize: 25,
                                                 color: 'red',
