@@ -7,8 +7,8 @@ class PickLocation extends Component {
 
     state = {
         focusedLocation: {
-            latitude: 37.7900352,
-            longitude: -122.4103726,
+            latitude: 33.753746,
+            longitude: -84.386330,
             latitudeDelta: 0.0122,
             longitudeDelta: Dimensions.get("window").width /
                 Dimensions.get("window").height * 0.0122

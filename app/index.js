@@ -2,13 +2,6 @@ import React, { Component } from 'react';
 import { StyleSheet, View } from 'react-native';
 import { RootNavigator } from './routes';
 
-import Home from './components/auth/authForm';
-import Chat from './components/Chat Screen/chat';
-
-import {
-    Router,
-    Scene
-} from 'react-native-router-flux';
 
 class App extends Component {
     render() {
