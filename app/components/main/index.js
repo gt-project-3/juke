@@ -22,6 +22,7 @@ import {
     ListItem,
 } from 'native-base';
 
+
 const theme = {
     Button: {
         raised: true,
@@ -82,7 +83,11 @@ class GameComponent extends Component {
                                         <Text style={{ fontSize: 18 }}>Spins</Text>
                                     </Button>
                                 </Left>
-                                <Button transparent danger>
+                                <Button 
+                                    transparent 
+                                    danger
+                                   
+                                >
                                     <Icon
                                         active
                                         name="chatbubbles"
@@ -138,6 +143,7 @@ class GameComponent extends Component {
                                         <Icon
                                             active
                                             name="chatbubbles"
+
                                             style={{
                                                 fontSize: 25,
                                                 color: 'red',

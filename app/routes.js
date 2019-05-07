@@ -33,9 +33,9 @@ const NewsStack = createStackNavigator({
 }, headerConf);
 
 const DjStack = createStackNavigator({
-    Maps: Maps,
-    Article: DjArticle
-},
+        Maps: Maps,
+        Article: DjArticle
+    },
     headerConf
 );
 
@@ -45,30 +45,30 @@ const AppStack = createBottomTabNavigator({
     Maps: DjStack,
     // Dj: Dj
 }, {
-        tabBarOptions: {
-            activeTintColor: '#fff',
-            showLabel: false,
-            activeBackgroundColor: '#db3b3b',
-            inactiveBackgroundColor: '#bf2d2d',
-            // style: {
-            //     backgroundColor: '#bf2d2d'
-            // }
-        }
-    })
+    tabBarOptions: {
+        activeTintColor: '#fff',
+        showLabel: false,
+        activeBackgroundColor: '#db3b3b',
+        inactiveBackgroundColor: '#bf2d2d',
+        // style: {
+        //     backgroundColor: '#bf2d2d'
+        // }
+    }
+})
 
 const AuthStack = createStackNavigator({
     SignIn: SignIn
 }, {
-        headerMode: 'none'
-    })
+    headerMode: 'none'
+})
 
 export const RootNavigator = () => {
     return createAppContainer(createSwitchNavigator({
         App: AppStack,
         Auth: AuthStack
     }, {
-            initialRouteName: 'Auth'
-        }))
+        initialRouteName: 'Auth'
+    }))
 
 
 }
