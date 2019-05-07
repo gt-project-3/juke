@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
 import { View, Button, Text, StyleSheet, Platform } from 'react-native';
+import {
+    Actions,
+} from 'react-native-router-flux'
+
 
 import Input from '../../utils/forms/input';
 import ValidationRules from '../../utils/forms/validationRules'
@@ -9,7 +13,7 @@ class AuthForm extends Component {
     state = {
         type: 'Login',
         action: 'Login',
-        actionMode: 'I want to register',
+        // actionMode: 'I want to register',
         hasErrors: false,
         form: {
             email: {
@@ -80,7 +84,7 @@ class AuthForm extends Component {
         this.setState({
             type: type === 'Login' ? 'Register' : 'Login',
             action: type === 'Login' ? 'Register' : 'Login',
-            actionMode: type === 'Login' ? 'I want to Login' : 'I want to register'
+            // actionMode: type === 'Login' ? 'I want to Login' : 'I want to register'
         })
     }
 
@@ -189,14 +193,14 @@ class AuthForm extends Component {
 
 
                     </View>
-                    <View style={styles.button}>
+                    {/* <View style={styles.button}>
                         <Button
                             title={this.state.actionMode}
                             onPress={this.changeFormType}
                         />
 
 
-                    </View>
+                    </View> */}
                     <View style={styles.button}>
                         <Button
                             title="I'll do it later"

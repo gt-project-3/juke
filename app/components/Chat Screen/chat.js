@@ -3,6 +3,7 @@ import React from 'react';
 import { GiftedChat } from 'react-native-gifted-chat';
 import Backend from '../../Backend/backend';
 
+
 class Chat extends React.Component {
     constructor(props) {
         super(props);

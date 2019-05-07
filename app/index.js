@@ -2,6 +2,14 @@ import React, { Component } from 'react';
 import { StyleSheet, View } from 'react-native';
 import { RootNavigator } from './routes';
 
+import Home from './components/auth/authForm';
+import Chat from './components/Chat Screen/chat';
+
+import {
+    Router,
+    Scene
+} from 'react-native-router-flux';
+
 class App extends Component {
     render() {
         const Nav = RootNavigator();
@@ -9,7 +17,16 @@ class App extends Component {
         return (
             <View style={styles.container}>
                 <Nav />
-            </View>
+                {/* <Router>
+                    <Scene key='root' style={{ paddingTop: 64 }}>
+                        {/* <Scene key='home' component={Home} title='Home' /> */}
+                {/* <Scene key='chat' component={Chat} title='Chat' />
+
+                    </Scene> */}
+
+                {/* </Router > * /} */}
+            </View >
+
         );
     }
 }

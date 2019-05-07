@@ -10,10 +10,10 @@ import {
 } from 'react-navigation';
 
 import SignIn from './components/auth';
-import Main from './components/main';
+import Main from './components/Chat Screen/chat';
 import Maps from './components/map/pickLocation';
 import Logo from './utils/logo';
-import Article from './components/main/article';
+import Article from './components/Chat Screen/chat';
 import DjArticle from './components/dj/article';
 
 const headerConf = {
