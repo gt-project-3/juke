@@ -13,8 +13,12 @@ import SignIn from './components/auth';
 import Main from './components/main';
 import Logo from './utils/logo';
 import DjArticle from './components/dj/article';
+import DJCardShowcase from './components/dj/dj'
 import Article from './components/main/article';
 import Maps from './components/map/pickLocation';
+import Chat from './components/Chat Screen/chat';
+import List from './components/ListComponent/list';
+import ListTwo from './components/ListComponent/listTwo';
 
 const headerConf = {
     headerLayoutPreset: 'center',
@@ -29,7 +33,12 @@ const headerConf = {
 
 const NewsStack = createStackNavigator({
     Main: Main,
-    Article: Article
+    Article: Article,
+    Chat: Chat,
+    List: List,
+    ListTwo: ListTwo,
+    DJCardShowcase: DJCardShowcase
+
 }, headerConf);
 
 const DjStack = createStackNavigator({
@@ -65,7 +74,8 @@ const AuthStack = createStackNavigator({
 export const RootNavigator = () => {
     return createAppContainer(createSwitchNavigator({
         App: AppStack,
-        Auth: AuthStack
+        Auth: AuthStack,
+
     }, {
         initialRouteName: 'Auth'
     }))

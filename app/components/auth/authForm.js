@@ -145,6 +145,10 @@ class AuthForm extends Component {
             })
         }
 
+        signIn = (formToSubmit) => {
+
+        }
+
     }
 
     render() {

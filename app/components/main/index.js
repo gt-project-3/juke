@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Image, View, StyleSheet, ScrollView, FlatList } from 'react-native';
+import { Image, View, StyleSheet, ScrollView, FlatList, createStackNavigator, createAppContainer } from 'react-native';
 import {
     Container,
     Footer,
@@ -22,6 +22,7 @@ import {
     ListItem,
 } from 'native-base';
 
+import { Actions } from 'react-native-router-flux';
 
 const theme = {
     Button: {
@@ -29,7 +30,7 @@ const theme = {
     },
 };
 
-class GameComponent extends Component {
+class Main extends Component {
     render() {
         return (
             <ScrollView>
@@ -40,7 +41,7 @@ class GameComponent extends Component {
                             <Input placeholder="Search" />
                             <Icon name="ios-people" />
                         </Item>
-                        <Button transparent>
+                        <Button transparent onPress={() => this.props.navigation.navigate('DJCardShowcase')}>
                             <Text>Search</Text>
                         </Button>
                     </Header>
@@ -71,7 +72,8 @@ class GameComponent extends Component {
                             </CardItem>
                             <CardItem>
                                 <Left>
-                                    <Button transparent danger>
+                                    <Button transparent danger
+                                        onPress={() => this.props.navigation.navigate('List')}>
                                         <Icon
                                             active
                                             name="headset"
@@ -83,11 +85,8 @@ class GameComponent extends Component {
                                         <Text style={{ fontSize: 18 }}>Spins</Text>
                                     </Button>
                                 </Left>
-                                <Button 
-                                    transparent 
-                                    danger
-                                   
-                                >
+                                <Button transparent danger
+                                    onPress={() => this.props.navigation.navigate('Chat')}>
                                     <Icon
                                         active
                                         name="chatbubbles"
@@ -126,7 +125,8 @@ class GameComponent extends Component {
                             </CardItem>
                             <CardItem>
                                 <Left>
-                                    <Button transparent danger>
+                                    <Button transparent danger
+                                        onPress={() => this.props.navigation.navigate('ListTwo')}>
                                         <Icon
                                             active
                                             name="headset"
@@ -139,7 +139,8 @@ class GameComponent extends Component {
                                     </Button>
                                 </Left>
                                 <Right>
-                                    <Button transparent danger>
+                                    <Button transparent
+                                        danger onPress={() => this.props.navigation.navigate('Chat')}>
                                         <Icon
                                             active
                                             name="chatbubbles"
@@ -148,6 +149,7 @@ class GameComponent extends Component {
                                                 fontSize: 25,
                                                 color: 'red',
                                             }}
+
                                         />
                                         <Text style={{ fontSize: 18 }}>Request</Text>
                                     </Button>
@@ -240,4 +242,4 @@ const styles = StyleSheet.create({
         borderColor: '#d6d7da',
     },
 });
-export default GameComponent;
+export default Main;
