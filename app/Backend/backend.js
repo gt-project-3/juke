@@ -2,7 +2,7 @@ export default {
 
     addNewMessage: function (message, eventID) {
         return fetch(
-            `https://localhost:3001/event/message/${eventID}`,
+            `https://yodj-server2.herokuapp.com/event/message/${eventID}`,
             {
                 method: 'PUT',
                 headers: { 'Content-Type': 'application/json' },
@@ -14,7 +14,7 @@ export default {
 
     getAllMessages: function (eventID) {
         return fetch(
-            `https://localhost:3001/event/message/${eventID}`,
+            `https://yodj-server2.herokuapp.com/event/message/${eventID}`,
             {
                 method: 'GET',
                 headers: { 'Content-Type': 'application/json' },
@@ -23,7 +23,7 @@ export default {
     },
 
     createUserId: function (user) {
-        return fetch(`https://localhost:3001/user`, {
+        return fetch(`https://yodj-server2.herokuapp.com/user`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(user),
