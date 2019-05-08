@@ -110,46 +110,46 @@ class AuthForm extends Component {
 
     }
 
-    submitUser = () => {
-        let isFormValid = true;
-        let formToSubmit = {}
-        const formCopy = this.state.form;
+    // submitUser = () => {
+    //     let isFormValid = true;
+    //     let formToSubmit = {}
+    //     const formCopy = this.state.form;
 
-        for (let key in formCopy) {
-            if (this.state.type === 'Login') {
-                //Login
-                // if (key !== 'confirmPassword') {
-                //     isFormValid = isFormValid && formCopy[key].valid;
-                //     formToSubmit[key] = formCopy[key].valid;
-                // }
+    //     for (let key in formCopy) {
+    //         if (this.state.type === 'Login') {
+    //             //Login
+    //             // if (key !== 'confirmPassword') {
+    //             //     isFormValid = isFormValid && formCopy[key].valid;
+    //             //     formToSubmit[key] = formCopy[key].valid;
+    //             // }
 
-            } else {
-                //Register
-                isFormValid = isFormValid && formCopy[key].valid;
-                formToSubmit[key] = formCopy[key].valid;
+    //         } else {
+    //             //Register
+    //             isFormValid = isFormValid && formCopy[key].valid;
+    //             formToSubmit[key] = formCopy[key].valid;
 
-            }
+    //         }
 
-        }
-        if (isFormValid) {
-            if (this.state.type === 'Login') {
-                this.props.signIn(formToSubmit)
+    //     }
+    //     if (isFormValid) {
+    //         if (this.state.type === 'Login') {
+    //             this.props.signIn(formToSubmit)
 
-            } else {
-                this.props.signUp(formToSubmit)
-            }
+    //         } else {
+    //             this.props.signUp(formToSubmit)
+    //         }
 
-        } else {
-            this.setState({
-                hasErrors: true
-            })
-        }
+    //     } else {
+    //         this.setState({
+    //             hasErrors: true
+    //         })
+    //     }
 
-        signIn = (formToSubmit) => {
+    //     signIn = (formToSubmit) => {
 
-        }
+    //     }
 
-    }
+    // }
 
     render() {
         return (
@@ -184,30 +184,27 @@ class AuthForm extends Component {
                     secureTextEntry
                 // overrideStyle=
                 />
-
                 {this.confirmPassword()}
                 {this.formHasErrors()} */}
 
                 <View style={{ marginTop: 20 }}>
-                    <View style={styles.button}>
+                    {/* <View style={styles.button}>
                         <Button
                             title={this.state.action}
                             onPress={this.submitUser}
                         />
 
 
-                    </View>
+                    </View> */}
                     {/* <View style={styles.button}>
                         <Button
                             title={this.state.actionMode}
                             onPress={this.changeFormType}
                         />
-
-
                     </View> */}
                     <View style={styles.button}>
                         <Button
-                            title="I'll do it later"
+                            title="Login"
                             onPress={() => this.props.goNext()}
                         />
 
