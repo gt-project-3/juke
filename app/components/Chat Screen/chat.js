@@ -16,7 +16,7 @@ class Chat extends React.Component {
             },
             message: '',
             messages: [],
-            eventID: '5ccb7d48c3c78ecef4a8f5dd',
+            eventID: '55ccb7d48c3c78ecef4a8f5dd',
         };
     }
     // state = {
@@ -83,7 +83,6 @@ class Chat extends React.Component {
                     //send message to backend
                     Backend.addNewMessage(
                         message,
-
                         this.state.eventID,
                     )
                         .then((response) => response.json())

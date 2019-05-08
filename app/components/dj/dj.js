@@ -7,15 +7,17 @@ class DJCardShowcase extends Component {
     render() {
         return (
             <Container>
-                <Header />
+                <Header>
+                    <Text>DJ Tech</Text>
+                </Header>
                 <Content>
                     <Card style={{ flex: 0 }}>
                         <CardItem>
                             <Left>
                                 <Thumbnail source={{ uri: 'Image URL' }} />
                                 <Body>
-                                    <Text>NativeBase</Text>
-                                    <Text note>April 15, 2016</Text>
+                                    <Text>Diamonds of Atlanta</Text>
+                                    <Text note>May 15, 2019</Text>
                                 </Body>
                             </Left>
                         </CardItem>
@@ -23,7 +25,7 @@ class DJCardShowcase extends Component {
                             <Body>
                                 <Image source={{ uri: 'https://unsplash.com/photos/g763DLmVJO8' }} style={{ height: 200, width: 200, flex: 1 }} />
                                 <Text>
-                                //Your text here
+                                    Come out and join me at one the hottest clubs in Atlanta, Diamonds of Atlanta. There, I will be on the one's and two's killing the club for the birthday boy Benjamin! If you want to hear one your favorite songs, take a look at my song list and shoot me a message and I'll make sure your song will be played.
                                 </Text>
                             </Body>
                         </CardItem>
