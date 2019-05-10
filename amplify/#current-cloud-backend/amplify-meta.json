@@ -1,0 +1,35 @@
+{
+	"providers": {
+		"awscloudformation": {
+			"AuthRoleName": "juke-dev-20190507172650-authRole",
+			"UnauthRoleArn": "arn:aws:iam::876439155559:role/juke-dev-20190507172650-unauthRole",
+			"AuthRoleArn": "arn:aws:iam::876439155559:role/juke-dev-20190507172650-authRole",
+			"Region": "us-east-1",
+			"DeploymentBucketName": "juke-dev-20190507172650-deployment",
+			"UnauthRoleName": "juke-dev-20190507172650-unauthRole",
+			"StackName": "juke-dev-20190507172650",
+			"StackId": "arn:aws:cloudformation:us-east-1:876439155559:stack/juke-dev-20190507172650/d41d1f70-710e-11e9-a227-0e9ab7cb9104"
+		}
+	},
+	"hosting": {
+		"S3AndCloudFront": {
+			"service": "S3AndCloudFront",
+			"providerPlugin": "awscloudformation",
+			"providerMetadata": {
+				"s3TemplateURL": "https://s3.amazonaws.com/juke-dev-20190507172650-deployment/amplify-cfn-templates/hosting/template.json",
+				"logicalId": "hostingS3AndCloudFront"
+			},
+			"lastPushTimeStamp": "2019-05-07T21:51:09.962Z",
+			"output": {
+				"CloudFrontSecureURL": "https://dutcwfy5rpkji.cloudfront.net",
+				"S3BucketSecureURL": "https://juke-20190507173810-hostingbucket-dev.s3.amazonaws.com",
+				"WebsiteURL": "http://juke-20190507173810-hostingbucket-dev.s3-website-us-east-1.amazonaws.com",
+				"CloudFrontDistributionID": "EFAWMU69ST3FT",
+				"Region": "us-east-1",
+				"HostingBucketName": "juke-20190507173810-hostingbucket-dev",
+				"CloudFrontDomainName": "dutcwfy5rpkji.cloudfront.net"
+			},
+			"lastPushDirHash": "uOIjK1+hzVG5PRfzrkJitTnPxLo="
+		}
+	}
+}

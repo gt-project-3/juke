@@ -56,8 +56,10 @@ class Main extends Component {
                                         }}
                                     />
                                     <Body>
+                                        <Button transparent onPress={() => this.props.navigation.navigate('DJCardShowcase')}>
                                         <Text>DJ Tech</Text>
                                         <Text note>Its my Birthday</Text>
+                                        </Button>
                                     </Body>
                                 </Left>
                             </CardItem>
