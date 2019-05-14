@@ -60,6 +60,7 @@ class Chat extends React.Component {
           (currentState) => {
             console.log('This line 66: ', data);
             return {
+                //Adds message data from the server to the gifted chat UI and reverse's them to be in proper chronological order
               messages: GiftedChat.append(currentState, data.reverse()),
             };
           },
